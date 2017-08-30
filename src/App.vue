@@ -1,30 +1,33 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
-      <li><a href="https://gitter.im/vuejs/vue" target="_blank">Gitter Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank">Twitter</a></li>
-    </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li><a href="http://router.vuejs.org/" target="_blank">vue-router</a></li>
-      <li><a href="http://vuex.vuejs.org/" target="_blank">vuex</a></li>
-      <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
-    </ul>
+      <img src="https://static1.squarespace.com/static/565332d0e4b02fdfadbf95cd/5654d60be4b0ccdbf9a8966e/566733fe05f8e2d0dde2d58d/1449604162231/upanddown.jpg?format=750w" alt="rebalanced" height="250px"><br>
+      <img src="./assets/Logomakr_2XrFkq.png" alt="rebalanced" width="700px">
+      <br>
+
+      <em>A Full-Stack Galvanize Q3 Project<br>
+        To get the most from workouts, <br>
+        for those who don't have time to make it to the gym,<br>
+        but are still counting calories.
+        </em>
+    <user></user>
+    <footer id="footer">
+      Race Carpenter 2017<br>
+      <div id="links"><a href="https://github.com/Racecarpenter/q3-project-rebalanced" target=blank>Github</a></div>
+      <div id="links"><a href="https://www.linkedin.com/in/racecarpenter/" target=blank>Contact</a></div>
+    </footer>
   </div>
 </template>
 
 <script>
+import User from './components/User.vue';
 export default {
   name: 'app',
+  components: {
+    User
+  },
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+
     }
   }
 }
@@ -37,24 +40,17 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  height: 100vh;
+  width: 100%;
 }
-
-h1, h2 {
-  font-weight: normal;
+#footer {
+  background-color: green;
+  color: white;
 }
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-a {
-  color: #42b983;
+#links {
+  margin: 0px auto;
+  width: 100px;
+  background-color: white;
+  border: 2px solid black;
 }
 </style>
