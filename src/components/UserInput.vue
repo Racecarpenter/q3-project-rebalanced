@@ -4,7 +4,12 @@
     <input id="inny" type="text" placeholder="weight(lb)" class="form-control" v-model="weight">
     <input id="inny" type="text" placeholder="height(in)" class="form-control" v-model="height">
     <input id="inny" type="text" placeholder="age" class="form-control" v-model="age">
-    <input id="inny" type="text" placeholder="sex" class="form-control" v-model="sex">
+
+    <select id="inny" v-model="sex">
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="">Prefer Not to Say</option>
+    </select>
     <input id="inny" type="text" placeholder="Number of Workouts(week)" class="form-control" v-model="workoutfreq"><br>
     <a href="http://localhost:8080/data"><button class="btn-success" v-on:click="addUser" style="font-size:30px; background-color:green; color:white; border-radius:10%;"><em>GO</em></button></a>
 </div>

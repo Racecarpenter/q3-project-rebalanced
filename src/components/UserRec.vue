@@ -1,6 +1,6 @@
 <template lang="html">
   <div id="rec">
-    For {{users.username}} to lose a lb per-week they must only eat {{Math.ceil(users.bmr - 500)}} calories a day<br>
+    For {{users.username}} to lose a lb per-week {{this.gender}} must only eat {{Math.ceil(users.bmr - 500)}} calories a day<br>
   </div>
 </template>
 
@@ -9,8 +9,15 @@ export default {
   name: 'user-rec',
   props: ['users'],
   data () {
+    if(users.sex==='male'){
+      this.gender='he'
+    }else if(users.sex==='female'){
+      this.gender='she'
+    }else{
+      this.gender='they'
+    }
     return {
-
+      gender: ''
     }
   }
 }

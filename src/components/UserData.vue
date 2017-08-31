@@ -18,10 +18,10 @@
       <td id="workoutfreq">
           {{users.workoutfreq}}
       </td>
-      <td id="bmr">
-        {{users.bmr}}
+      <td id="bmr"><br>
+        {{users.bmr}}<br>
+        <a href="http://localhost:8080/"><button v-on:click="deleteUser" class="btn-danger">Delete</button></a>
       </td>
-      <a href="http://localhost:8080/"><button v-on:click="deleteUser" class="btn-danger">Delete</button></a>
     </tr>
 </template>
 
