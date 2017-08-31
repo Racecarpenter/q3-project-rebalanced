@@ -8,8 +8,9 @@
         To get the most from workouts, <br>
         for those who don't have time to make it to the gym,<br>
         but are still counting calories.
-        </em>
-    <user></user>
+      </em><br>
+        <a href="http://localhost:8080/newuser">Enter</a><br><br>
+    <router-view></router-view>
     <footer id="footer">
       Race Carpenter 2017<br>
       <div id="links"><a href="https://github.com/Racecarpenter/q3-project-rebalanced" target=blank>Github</a></div>
@@ -40,12 +41,17 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  height: 100vh;
+  height: 700px;
   width: 100%;
+  overflow-y: scroll;
 }
 #footer {
   background-color: green;
   color: white;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  margin-left: -8px;
 }
 #links {
   margin: 0px auto;

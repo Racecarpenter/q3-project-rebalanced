@@ -16,8 +16,12 @@
         {{users.sex}}
       </td>
       <td id="workoutfreq">
-        {{users.workoutfreq}}
+          {{users.workoutfreq}}
       </td>
+      <td id="bmr">
+        {{users.bmr}}
+      </td>
+      <a href="http://localhost:8080/data"><button v-on:click="deleteUser" class="btn-danger">Delete</button></a>
     </tr>
 </template>
 
@@ -26,17 +30,14 @@ export default {
   name: 'user-data',
   props: ['users'],
   data () {
-
     return {
-      BMR: 0
+
     }
   },
-  computed: {
-    bmrCalc(){
-    var userHeight = this.$store.state.users[0].height;
-    var userWeight = this.$store.state.users[0].weight;
-    var userAge = this.$store.state.users[0].age;
-    return console.log('user height: ', userHeight);
+  methods: {
+    deleteUser() {
+      console.log('blah: ', this.users.id)
+      this.$store.dispatch('deleteUser', this.users)
     }
   }
 }

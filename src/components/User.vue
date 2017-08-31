@@ -1,6 +1,5 @@
 <template lang="html">
 <div id="user">
-  <user-input></user-input>
     <table class="table tably">
   <thead>
     <tr>
@@ -10,6 +9,7 @@
       <th>Age</th>
       <th>Sex</th>
       <th>Workoutfreq</th>
+      <th>BMR</th>
     </tr>
   </thead>
   <tbody>
@@ -27,16 +27,6 @@ export default {
   components: {
     UserData,
     UserInput
-  },
-  data () {
-    return {
-      username:'',
-      height:[],
-      weight:[],
-      age:[],
-      sex: [],
-      workoutfreq:[]
-    }
   },
   computed: {
     users() {
