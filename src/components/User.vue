@@ -4,11 +4,11 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th>Weight(kg)</th>
-      <th>Height</th>
+      <th>Weight(lb)</th>
+      <th>Height(in)</th>
       <th>Age</th>
       <th>Sex</th>
-      <th>Workoutfreq</th>
+      <th>Workoutfreq(week)</th>
       <th>BMR</th>
     </tr>
   </thead>
@@ -16,17 +16,20 @@
     <user-data v-for="users in users" v-bind:users="users" :key="users.id"></user-data>
   </tbody>
 </table>
+    <user-rec v-for="users in users" v-bind:users="users" :key="users.id"></user-rec>
 </div>
 </template>
 
 <script>
 import UserData from './UserData.vue';
 import UserInput from './UserInput.vue';
+import UserRec from './UserRec.vue';
 export default {
   name: 'user',
   components: {
     UserData,
-    UserInput
+    UserInput,
+    UserRec
   },
   computed: {
     users() {

@@ -21,7 +21,7 @@
       <td id="bmr">
         {{users.bmr}}
       </td>
-      <a href="http://localhost:8080/data"><button v-on:click="deleteUser" class="btn-danger">Delete</button></a>
+      <a href="http://localhost:8080/"><button v-on:click="deleteUser" class="btn-danger">Delete</button></a>
     </tr>
 </template>
 

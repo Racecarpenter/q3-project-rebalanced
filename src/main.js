@@ -5,10 +5,12 @@ import axios from 'axios';
 import VueRouter from 'vue-router';
 import UserInput from './components/UserInput.vue';
 import User from './components/User.vue';
+import Home from './components/Home.vue';
 
 Vue.use(VueRouter);
 
 const routes = [
+  {path: '/', component: Home},
   {path: '/newuser', component: UserInput},
   {path: '/data', component: User}
 ]
